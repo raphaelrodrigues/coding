@@ -101,7 +101,7 @@ function feedLoaded(result) {
   }
 }
 
-``
+```
 ##Load Feed
 
 ```JAVA
