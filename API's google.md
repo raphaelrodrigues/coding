@@ -75,6 +75,7 @@ Poderá servir para procurar por #tag.Exemplo:
   searchControl.execute('President');
 ```
 
+
 #Google Feeds API
 
 
