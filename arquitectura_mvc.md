@@ -27,14 +27,6 @@ public interface EmployeeDao extends GenericDao<Employee, Long> {
 
 ```JAVA
 
-package org.timesheet.service.impl;
-
-import org.hibernate.Query;
-import org.springframework.stereotype.Repository;
-import org.timesheet.domain.Employee;
-import org.timesheet.service.dao.EmployeeDao;
-
-@Repository('employeeDao')
 public class EmployeeDaoImpl extends HibernateDao<Employee, Long> implements EmployeeDao {
 
     @Override
@@ -236,12 +228,12 @@ Embora as classes podem conter execução ou comportamentos de gestão, um objet
 ##Classe BO
 ```JAVA
 public class PessoaBO { 
-    public void novaPessoa(Pessoa pessoa) { 
-        new PessoaDAO().savePessoa(pessoa)
-    }
-    public List<Pessoa> PegarPessoas(){ 
-        new PessoaDAO().getPessoas();
-    } 
+    public void novaPessoa(Pessoa pessoa) { 
+	 new PessoaDAO().savePessoa(pessoa)
+     }
+    public List<Pessoa> PegarPessoas(){ 
+          new PessoaDAO().getPessoas();
+     } 
 } 
 ```
 
@@ -251,21 +243,21 @@ Praticamente são classes escritas de acordo com uma convenção em particular. 
 ##Classe BEAN
 ```JAVA
 public class Pessoa {
-    private String nome; 
-    private String idade; 
-
-    public String getNome() { 
-        return nome; 
-    } 
-    public void setNome(String nome) { 
-        this.nome = nome; 
-    } 
-    public String getIdade() { 
-         return idade; 
-    } 
-    public void setIdade(String idade) { 
-        this.idade = idade; 
-    } 
+    private String nome;
+    private String idade;
+   
+    public String getNome() {
+ 	return nome;
+     }
+     public void setNome(String nome) {
+	 this.nome = nome;
+     }
+     public String getIdade() {
+	 return idade;
+    }
+    public void setIdade(String idade) {
+	 this.idade = idade;
+     }
 }
 
 ```
@@ -280,15 +272,15 @@ Classe DAO
 
 ```JAVA
 public class PessoaDAO {
-    public void savePessoa(Pessoa pessoa){ 
-        //CODIFICAÇÃO AKI 
-    } 
-    public void deletePessoa(Pessoa pessoa){ 
-        //CODIFICAÇÃO AKI 
-    } 
-    public List<Pessoa> getPessoas(){ 
-        //CODIFICAÇÃO AKI 
-        return list; 
-    }
+     public void savePessoa(Pessoa pessoa){ 
+	 //CODIFICAÇÃO AKI 
+    }
+    public void deletePessoa(Pessoa pessoa){ 
+ 	 //CODIFICAÇÃO AKI 
+    }
+    public List<Pessoa> getPessoas(){ 
+	 //CODIFICAÇÃO AKI 
+	 return list; 
+     }
 }
 ```
