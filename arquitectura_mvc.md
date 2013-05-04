@@ -305,12 +305,6 @@ public class Rectangle implements IBox
 }
 ```
 
-```JAVA
-public static void main(String args[])
-{
-    Ibox myBox=new Ibox();
-}
-```
 
 ```JAVA
 Ibox myBox=new Rectangle();
