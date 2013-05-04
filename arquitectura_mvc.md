@@ -284,3 +284,40 @@ public class PessoaDAO {
      }
 }
 ```
+
+#Interfaces
+
+```JAVA
+public interface IBox
+{
+   public void setSize(int size);
+   public int getSize();
+   public int getArea();
+  //...and so on
+}
+```
+
+```JAVA
+public class Rectangle implements IBox
+{
+   private int size;
+   //Methods here
+}
+```
+
+```JAVA
+public static void main(String args[])
+{
+    Ibox myBox=new Ibox();
+}
+```
+
+```JAVA
+Ibox myBox=new Rectangle();
+```
+
+Later if i want to change, I do this
+```JAVA
+Ibox myBox=new OtherKindOfBox();
+```
+
