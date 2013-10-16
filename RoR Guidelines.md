@@ -11,10 +11,10 @@ Guia de estilo para desenvolvimento em Ruby On Rails.
 * Use Snake Case  (`lower_case_separeted_by_underscore`).
 * Constants (`ALL_UPPERCASE`).
 
-##Local Variables
+###Local Variables
 (`order_amount`).
 
-##Instance Variables
+###Instance Variables
 (`@colour`).
 
 
@@ -65,23 +65,33 @@ abbreviations.
 
     ```Ruby
     class Article
+      # associations
       has_many :comments
       belongs_to :author
 
+      #scopes
       default_scope order("id desc")
       scope :published, where(:published => true)
       scope :created_after, lambda{|time| ["created_at >= ?", time]}
 
+      # atributes
       attr_accessible :name, :email, :content
 
+      #validates
       validates :name, presence: true
       validates :email, format: { with: /\A[-a-z0-9_+\.]+\@([-a-z0-9]+\.)+[a-z0-9]{2,4}\z/i }
       validates :content, length: { maximum: 500 }
 
-      def init
+      # class methods
+      def sel.finit
         # do stuff here
         # ...
         # do stuff here
+      end
+
+      # instance methods
+      def any_instance_method
+        # ...
       end
 
     end
