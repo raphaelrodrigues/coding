@@ -19,30 +19,30 @@ Guia de estilo para desenvolvimento em Ruby On Rails.
 
 
 ## Model Naming 
-**Table:** orders
-**Class:** Order
-**File**: /app/models/order.rb
-**Primary Key:** id
-**Foreign Key:** customer_id
-**Link Tables:** items_orders
+**Table:** orders<br />
+**Class:** Order<br />
+**File**: /app/models/order.rb<br />
+**Primary Key:** id<br />
+**Foreign Key:** customer_id<br />
+**Link Tables:** items_orders<br />
 
 ##Controller Naming Convention
 
-**Class:** OrdersController
-**File:** /app/controllers/orders_controller.rb
-**Layout:** /app/layouts/orders.html.erb
+**Class:** OrdersController<br />
+**File:** /app/controllers/orders_controller.rb<br />
+**Layout:** /app/layouts/orders.html.erb<br />
 
 ##View Naming Convention
 
-**Helper:** /app/helpers/orders_helper.rb
-**Helper Module:** OrdersHelper
-**Views:** /app/views/orders/… (list.html.erb for example)
+**Helper:** /app/helpers/orders_helper.rb<br />
+**Helper Module:** OrdersHelper<br />
+**Views:** /app/views/orders/… (list.html.erb for example)<br />
 
 ##Tests Naming Convention
 
-**Unit:** /test/unit/order_test.rb
-**Functional:** /test/functional/orders_controller_test.rb
-**Fixtures:** /test/fixtures/orders.yml
+**Unit:** /test/unit/order_test.rb<br />
+**Functional:** /test/functional/orders_controller_test.rb<br />
+**Fixtures:** /test/fixtures/orders.yml<br />
 
 
 
