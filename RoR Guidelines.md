@@ -101,12 +101,12 @@ abbreviations.
 ```Ruby
    <%= select_tag :state, options_for_post_state(params[:default_state]) %>
 
-# app/helpers/posts_helper.rb
-def options_for_post_state(default_state)
-  options_for_select( [[t(:draft), "draft"], [t(:published), "published"]],
-                      default_state )
-end
-    ```
+    # app/helpers/posts_helper.rb
+    def options_for_post_state(default_state)
+      options_for_select( [[t(:draft), "draft"], [t(:published), "published"]],
+                          default_state )
+    end
+```
 
 
 # Functions
