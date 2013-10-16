@@ -1,6 +1,5 @@
-#Guides 
 
-Guia de estilo para desenvolvimento em Ruby On Rails.
+Guideline for Ruby On Rails.
 
 #Naming 
 
