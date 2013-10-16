@@ -35,7 +35,9 @@ Layout: /app/layouts/orders.html.erb
 ##View Naming Convention
 
 Helper: /app/helpers/orders_helper.rb
+
 Helper Module: OrdersHelper
+
 Views: /app/views/orders/… (list.html.erb for example)
 
 ##Tests Naming Convention
