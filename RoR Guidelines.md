@@ -1,4 +1,3 @@
-
 Guideline for Ruby On Rails.
 
 #Naming 
@@ -50,10 +49,6 @@ Guideline for Ruby On Rails.
 * Keep the controllers skinny - they should only retrieve data for the
   view layer and shouldn't contain any business logic (all the
   business logic should naturally reside in the model).
-* Each controller action should (ideally) invoke only one method other
-  than an initial find or new.
-* Share no more than two instance variables between a controller and a view.
-
 
 
 # Models
@@ -95,10 +90,40 @@ abbreviations.
 
     end
     ```
+#Helpers
+* Bad Smell
+```Ruby
+   <%= select_tag :state, options_for_select( [[t(:draft), "draft"],
+                                            [t(:published), "published"]],
+                                           params[:default_state] ) %>
+    ```
+*Refactor
+```Ruby
+   <%= select_tag :state, options_for_post_state(params[:default_state]) %>
+
+# app/helpers/posts_helper.rb
+def options_for_post_state(default_state)
+  options_for_select( [[t(:draft), "draft"], [t(:published), "published"]],
+                      default_state )
+end
+    ```
+
 
 # Functions
+```Ruby
+self.run
+self.can_run? # can this object run?
+self.running_allowed? # is running allowed here or by this user?
 
-##Boolean
+self.redeem!
+self.redeemable? # is this object currently redeemable?
+
+self.copy_to_clipboard
+self.copy_to_dashboard
+self.copyable? or self.can_be_copied? #can this object be copied
+self.copy_allowed?(:clipboard) # is copying to the clipboard allowed by me?
+```
+
 
 # Routing
 
