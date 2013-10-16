@@ -97,7 +97,7 @@ abbreviations.
                                             [t(:published), "published"]],
                                            params[:default_state] ) %>
     ```
-*Refactor
+* Refactor
 ```Ruby
    <%= select_tag :state, options_for_post_state(params[:default_state]) %>
 
